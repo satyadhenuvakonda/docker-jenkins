@@ -7,4 +7,6 @@ Mount the volumes
 docker build --tag myjenkins:v1 .
 
 # Run the image after build
-docker run -p 8081:8080 -p 50000:50000 --name=jenkins-master --mount source=jenkins-log,target=/var/log/jenkins -d myjenkins
+docker run -p 8081:8080 -p 50000:50000 --name=jenkins-master --mount source=jenkins-log,target=/var/log/jenkins --mount source=jenkins-data,target=/var/jenkins_home -d myjenkins:v2
+
+
