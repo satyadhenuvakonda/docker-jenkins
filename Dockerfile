@@ -12,7 +12,7 @@ RUN chown -R jenkins:jenkins /var/log/jenkins
 RUN chown -R jenkins:jenkins /var/cache/jenkins
 # RUN adduser jenkins sudo && chmod 0440 /etc/sudoers
 # RUN useradd -m jenkins && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
-USER jenkins
+
 
 
 ENV JAVA_OPTS="-Xmx8192m"
